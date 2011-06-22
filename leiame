@@ -18,7 +18,7 @@ Esse script habilita funcionalidades e instala programas essencias após a insta
     * Execute o script
         * <code>./debian_pos-instalacao.sh</code>
 ==Observação==
-Durante o processo o usuário será solicitado para algumas selecionar algumas opções.        
+Durante o processo o usuário será solicitado para selecionar algumas opções.        
 <br><br>    
 ----
 =Repositórios, Configurações e Instalações Realizadas=
