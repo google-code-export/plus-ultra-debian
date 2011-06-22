@@ -1,5 +1,7 @@
 #!/bin/bash
 
+nomedousuario="bcr"
+
 # --------------------------------------------------------------------------------
 # Debian Multimedia
 # --------------------------------------------------------------------------------
@@ -43,7 +45,7 @@ echo 'JAVA_HOME="/usr/lib/jvm/java-6-sun"' | tee -a /etc/environment
 # Funcionalidades
 # --------------------------------------------------------------------------------
 # Comandos de root apenas com sudo sem senha
-adduser bcr sudo
+adduser $nomedousuario sudo
 echo >> /etc/sudoers
 echo "%sudo ALL=NOPASSWD: ALL" >> /etc/sudoers
 
@@ -59,14 +61,14 @@ echo "fi"                               >> /root/.bashrc
 
 # Copia alias do bash
 cp -v systemFiles/.bash_aliases /root
-cp -v systemFiles/.bash_aliases /home/bcr/
+cp -v systemFiles/.bash_aliases /home/$nomedousuario/
 
 
 # --------------------------------------------------------------------------------
 # Vi Improved
 # --------------------------------------------------------------------------------
 cp -v systemFiles/.vimrc /root
-cp -v systemFiles/.vimrc /home/bcr/
+cp -v systemFiles/.vimrc /home/$nomedousuario/
 
 
 # --------------------------------------------------------------------------------
