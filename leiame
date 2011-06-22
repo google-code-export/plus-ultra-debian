@@ -1,1 +1,45 @@
+Esse script habilita funcionalides e instala programas essencias após a instalação do Debian Squeeze.
+<br><br><br>
+
+----
+=Instruções=
+
 Altere o nome do usuário na linha 3
+
+<br><br>
+----
+=Repositórios, Configurações e Instalações Realizadas=
+
+==Repositórios==
+    * Debian Multimedia
+    * Debian Backports
+    * Wine HQ
+<br><br>
+==Funcionalidades==
+    * Habilita o sudo. Permite que o usuário use sudo sem senha para realizar tarefas de root.
+    * Habilita auto completar para o root
+    * Fornece alias úteis para o usuário e root
+    * Habilita terminal colorido para o root
+<br><br>
+==Programas Instalados==
+    * Google Chrome
+    * Dropbox
+    * Wine
+    * VirtualBox
+    * Java Sun
+    * Compactadores e Descompactadores
+        * bzip2
+        * rar
+        * zip
+        * p7zip-full
+    * Servidor SSH
+    * Pacotes Multimedia
+        * VLC
+        * MPlayer
+        * Avidemux
+        * Recordmydesktop
+        * Audacity
+
+
+
+
