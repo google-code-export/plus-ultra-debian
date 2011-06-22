@@ -1,0 +1,12 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc            /proc           proc    defaults        0       0
+/dev/sdb5       /               ext3    errors=remount-ro  0       1
+/dev/sdb1       /boot           ext3    defaults        0       2
+/dev/sdb8       /home           ext3    defaults,exec        0       2
+/dev/sdb7       /usr            ext3    defaults,exec        0       2
+/dev/sdb6       none            swap    sw              0       0
+/dev/scd0       /media/cdrom0   udf,iso9660 user,noauto     0       0
+/dev/sda1       /media/data     ext3    defaults,user,exec   0       0
+/dev/sdb9      /media/homebackup     ext3    defaults,user,exec,rw   0       0
