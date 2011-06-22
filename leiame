@@ -1,12 +1,25 @@
-Esse script habilita funcionalides e instala programas essencias após a instalação do Debian Squeeze.
+=Descrição=
+Esse script habilita funcionalidades e instala programas essencias após a instalação do Debian Squeeze.
 <br><br><br>
 
 ----
 =Instruções=
-
-Altere o nome do usuário na linha 3
-
-<br><br>
+==Instalação==
+    * Faça o download da última versão script na guia [http://code.google.com/p/plus-ultra-debian/downloads/list Downloads]
+    * Entre no terminal
+    * Descompacte o arquivo
+        * <code>tar xvf sourceV????.tar</code>
+    * Altere o nome do usuário na linha 3 para nome de usuário desejado
+        * <code>nano debian_pos-instalacao.sh</code>
+    * Mude o usuário para root
+        * <code>su</code>
+    * Passe permissão de execução para o script
+        * <code>chmod +x debian_pos-instalacao.sh</code>
+    * Execute o script
+        * <code>./debian_pos-instalacao.sh</code>
+==Observação==
+Durante o processo o usuário será solicitado para algumas selecionar algumas opções.        
+<br><br>    
 ----
 =Repositórios, Configurações e Instalações Realizadas=
 
@@ -25,7 +38,7 @@ Altere o nome do usuário na linha 3
     * Google Chrome
     * Dropbox
     * Wine
-    * VirtualBox
+    * !VirtualBox
     * Java Sun
     * Compactadores e Descompactadores
         * bzip2
