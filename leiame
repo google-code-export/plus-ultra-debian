@@ -5,8 +5,9 @@ Esse script habilita funcionalidades e instala programas essencias após a insta
 ----
 =Instruções=
 ==Instalação==
-    * Faça o download da última versão script na guia [http://code.google.com/p/plus-ultra-debian/downloads/list Downloads]
+    * Faça o download da última versão desse script na guia [http://code.google.com/p/plus-ultra-debian/downloads/list Downloads]
     * Entre no terminal
+        * <code>Pressione Alt+F2 e digite gnome-terminal</code>
     * Descompacte o arquivo
         * <code>tar xvf sourceV????.tar</code>
     * Altere o nome do usuário na linha 3 para nome de usuário desejado
@@ -52,7 +53,6 @@ Durante o processo o usuário será solicitado para selecionar algumas opções.
         * Avidemux
         * Recordmydesktop
         * Audacity
-
 
 
 
