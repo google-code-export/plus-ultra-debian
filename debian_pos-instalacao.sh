@@ -153,10 +153,10 @@ aptitude --assume-yes install flashplugin-nonfree
 # --------------------------------------------------------------------------------
 # Java SUN
 # --------------------------------------------------------------------------------
-aptitude --assume-yes install sun-java6-jdk
-aptitude --assume-yes install sun-java6-jre
-aptitude --assume-yes install sun-java6-plugin
-update-java-alternatives -s java-6-sun
+#aptitude --assume-yes install sun-java6-jdk
+#aptitude --assume-yes install sun-java6-jre
+#aptitude --assume-yes install sun-java6-plugin
+#update-java-alternatives -s java-6-sun
 
 
 # --------------------------------------------------------------------------------
@@ -263,18 +263,14 @@ aptitude --assume-yes install gprename
 # --------------------------------------------------------------------------------
 # Dropbox
 # --------------------------------------------------------------------------------
+# Prerequisitos
 aptitude --assume-yes install libnautilus-extension-dev
 aptitude --assume-yes install python-docutils
-wget --quiet "http://www.dropbox.com/download?dl=packages/nautilus-dropbox-0.6.7.tar.bz2"
-tar xjvf "nautilus-dropbox-0.6.7.tar.bz2"
-cd nautilus-dropbox-0.6.7
-./configure
-make
-make install
+# Dropbox
+wget -O nautilus-dropbox_0.7.1_i386.deb --quiet "http://www.dropbox.com/download?dl=packages/debian/nautilus-dropbox_0.7.1_i386.deb"
+dpkg --install nautilus-dropbox_0.7.1_i386.deb
+rm -r nautilus-dropbox_0.7.1_i386.deb
 dropbox start -i
-rm -r "nautilus-dropbox-0.6.7.tar.bz2" nautilus-dropbox-0.6.7
-
-
 
 # --------------------------------------------------------------------------------
 # 
