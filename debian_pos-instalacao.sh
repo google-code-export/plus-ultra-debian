@@ -1,19 +1,16 @@
 #!/bin/sh
 
-nomedousuario="bcr"
+nomedousuario="nome do seu usuário"
 distribuicao="squeeze"
 
 # --------------------------------------------------------------------------------
 # Debian Multimedia
 # --------------------------------------------------------------------------------
 echo >> /etc/apt/sources.list
-echo "deb http://ftp.br.debian.org/debian-multimedia stable main" >> /etc/apt/sources.list
-echo "deb-src http://ftp.br.debian.org/debian-multimedia stable main" >> /etc/apt/sources.list
+echo "deb http://www.deb-multimedia.org stable main non-free" >> /etc/apt/sources.list
 
 # Faz o download da keyring
-wget --quiet "http://www.debian-multimedia.org/pool/main/d/debian-multimedia-keyring/debian-multimedia-keyring_2010.12.26_all.deb"
-dpkg --install "debian-multimedia-keyring_2010.12.26_all.deb"
-rm "debian-multimedia-keyring_2010.12.26_all.deb"
+aptitude --assume-yes install deb-multimedia-keyring
 aptitude update
 
 

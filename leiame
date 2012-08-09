@@ -1,5 +1,5 @@
 =Descrição=
-Esse script habilita funcionalidades e instala programas essencias após a instalação do Debian Squeeze.
+Esse script habilita funcionalidades e instala programas essenciais após a instalação do Debian Squeeze.
 <br><br><br>
 
 ----
@@ -52,8 +52,16 @@ Durante o processo o usuário será solicitado para selecionar algumas opções.
         * Avidemux
         * Recordmydesktop 
         * Audacity
-
-
-
+    * Editores
+        * VIM
+    * Desenvolvimento
+        * gcc/g++
+        * binutils
+        * mercurial
+    * Ferramentas Administrativas
+        * htop
+        * iftop
+        * galternatives
+        * macchanger
 
 
