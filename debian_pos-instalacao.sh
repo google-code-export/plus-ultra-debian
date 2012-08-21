@@ -1,6 +1,7 @@
 #!/bin/sh
 
 nomedousuario="nome do seu usuário"
+email="email"
 distribuicao="squeeze"
 
 # --------------------------------------------------------------------------------
@@ -65,6 +66,12 @@ echo "fi"                               >> /root/.bashrc
 # Copia aliases do bash
 cp -v systemFiles/.bash_aliases /root
 cp -v systemFiles/.bash_aliases /home/$nomedousuario/
+
+# Mercurial
+echo        >> ~/.hgrc
+echo "[ui]" >> ~/.hgrc
+echo "username = $nomedousuario <$email>" >> ~/.hgrc
+
 
 # --------------------------------------------------------------------------------
 # Vi Improved
