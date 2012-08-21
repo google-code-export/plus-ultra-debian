@@ -226,8 +226,10 @@ aptitude --assume-yes install make
 aptitude --assume-yes install python3
 aptitude --assume-yes install binutils
 aptitude --assume-yes install libstdc++5
-aptitude --assume-yes install mercurial
 
+# Mercurial and tools
+aptitude --assume-yes install mercurial
+aptitude --assume-yes install hgview
 
 # --------------------------------------------------------------------------------
 # Linux Development
