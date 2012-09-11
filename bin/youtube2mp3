@@ -1,0 +1,44 @@
+#!/bin/sh
+
+# ------------------------------------------------------------------------------------------------
+# Variáveis 
+# ------------------------------------------------------------------------------------------------
+ID="$1" 
+filename="$2"
+
+# ------------------------------------------------------------------------------------------------
+# Funções 
+# ------------------------------------------------------------------------------------------------
+function quit {
+    echo "$0 <Precisa ser um ID de vídeo YouTube> '<Nome que quer que o arquivo mp3 tenha>'" 
+    echo "\tExemplo: $0 T8-isWKt_-0 'Lost And Lonely - Ramus'" 
+    echo "Para nomes de arquivos compostos é preciso aspas (') ou aspas duplas (\")"
+
+    exit 1 
+}
+
+# ------------------------------------------------------------------------------------------------
+# Principal
+# ------------------------------------------------------------------------------------------------
+# Orienta o uso correto
+if [ -z "$ID" ]; then 
+    quit
+fi 
+
+if [ -z "$filename" ]; then 
+    quit
+fi
+
+# Formata a url do youtube com o ID
+VIDEO="http://www.youtube.com/watch?v=$ID"
+
+# Faz o download o vídeo
+youtube-dl $VIDEO -o "$filename.flv"
+
+# Converte o vídeo para mp3
+ffmpeg -i "$filename.flv" "$filename.mp3"
+
+# Deleta o vídeo
+rm -rf "$filename.flv"
+
+echo Vídeo convertido para mp3 com sucesso!

@@ -1,8 +1,12 @@
 #!/bin/sh
 
+# ------------------------------------------------------------------------------------------------
+# Variáveis 
+# ------------------------------------------------------------------------------------------------
 nomedousuario="nome do seu usuário"
-email="email"
+email="email" # Para configurar o Mercurial (Opcional)
 distribuicao="squeeze"
+
 
 # --------------------------------------------------------------------------------
 # Debian Multimedia
@@ -83,7 +87,7 @@ cp -v systemFiles/.vimrc /home/$nomedousuario/
 # --------------------------------------------------------------------------------
 # Scripts
 # --------------------------------------------------------------------------------
-cp -v bin/* /bin
+cp --verbose bin/* /bin
 
 
 # --------------------------------------------------------------------------------
@@ -117,6 +121,8 @@ aptitude --assume-yes install avidemux
 # Record My Desktop
 aptitude --assume-yes install recordmydesktop
 aptitude --assume-yes install gtk-recordmydesktop
+# Converte Víceos do YouTube para MP3
+aptitude --assume-yes install ffmpeg youtube-dl
 
 
 # --------------------------------------------------------------------------------
@@ -273,10 +279,11 @@ aptitude --assume-yes install gprename
 aptitude --assume-yes install libnautilus-extension-dev
 aptitude --assume-yes install python-docutils
 # Dropbox
-wget -O nautilus-dropbox_0.7.1_i386.deb --quiet "http://www.dropbox.com/download?dl=packages/debian/nautilus-dropbox_0.7.1_i386.deb"
-dpkg --install nautilus-dropbox_0.7.1_i386.deb
-rm -r nautilus-dropbox_0.7.1_i386.deb
+wget -O nautilus-dropbox.deb --quiet "http://linux.dropbox.com/packages/debian/nautilus-dropbox_1.4.0_all.deb"
+dpkg --install nautilus-dropbox.deb
+rm -r nautilus-dropbox.deb
 dropbox start -i
+
 
 # --------------------------------------------------------------------------------
 # 
