@@ -121,9 +121,10 @@ aptitude --assume-yes install avidemux
 # Record My Desktop
 aptitude --assume-yes install recordmydesktop
 aptitude --assume-yes install gtk-recordmydesktop
-# Converte Víceos do YouTube para MP3
+# Converte Vídeos do YouTube para MP3
 aptitude --assume-yes install ffmpeg youtube-dl
-
+# Toca músicas pela linha de comando.
+aptitude --assume-yes install mpg321
 
 # --------------------------------------------------------------------------------
 # Wine HQ
