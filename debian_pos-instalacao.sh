@@ -15,6 +15,7 @@ echo >> /etc/apt/sources.list
 echo "deb http://www.deb-multimedia.org stable main non-free" >> /etc/apt/sources.list
 
 # Faz o download da keyring
+aptitude update
 aptitude --assume-yes install deb-multimedia-keyring
 aptitude update
 
