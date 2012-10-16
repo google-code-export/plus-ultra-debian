@@ -125,7 +125,8 @@ aptitude --assume-yes install gtk-recordmydesktop
 aptitude --assume-yes install ffmpeg youtube-dl
 # Toca músicas pela linha de comando.
 aptitude --assume-yes install mpg321
-
+# Edição de imagem pela linha de comando
+aptitude --assume-yes install imagemagick
 # --------------------------------------------------------------------------------
 # Wine HQ
 # --------------------------------------------------------------------------------
