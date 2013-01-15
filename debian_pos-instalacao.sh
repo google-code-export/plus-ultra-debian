@@ -1,9 +1,11 @@
 #!/bin/sh
 
+# Execute como root
+
 # ------------------------------------------------------------------------------------------------
 # Variáveis 
 # ------------------------------------------------------------------------------------------------
-nomedousuario="nome do seu usuário"
+nomedousuario="nome do seu usuário" # Coloque seu nome de usuário
 email="email" # Para configurar o Mercurial (Opcional)
 distribuicao="squeeze"
 
@@ -26,11 +28,6 @@ aptitude update
 echo >> /etc/apt/sources.list
 echo "deb http://backports.debian.org/debian-backports $distribuicao-backports main" >> /etc/apt/sources.list
 aptitude update
-
-
-# --------------------------------------------------------------------------------
-# Wine HQ
-# --------------------------------------------------------------------------------
 
 
 # --------------------------------------------------------------------------------
@@ -123,8 +120,10 @@ aptitude --assume-yes install ffmpeg youtube-dl
 aptitude --assume-yes install mpg321
 # Edição de imagem pela linha de comando
 aptitude --assume-yes install imagemagick
+
+
 # --------------------------------------------------------------------------------
-# Wine HQ
+# Wine
 # --------------------------------------------------------------------------------
 aptitude --assume-yes install wine
 

@@ -3,7 +3,7 @@ Esse script habilita funcionalidades e instala programas essenciais após a inst
 <br><br><br>
 
 ----
-=Instruções=
+=Instruções do Script Principal=
 ==Instalação==
     * Faça o download da última versão desse script na guia [http://code.google.com/p/plus-ultra-debian/downloads/list Downloads]
     * Entre no terminal
@@ -27,7 +27,6 @@ Durante o processo o usuário será solicitado para selecionar algumas opções.
 ==Repositórios==
     * Debian Multimedia
     * Debian Backports
-    * Wine HQ
 <br><br>
 ==Funcionalidades==
     * Habilita o sudo. Permite que o usuário use sudo sem senha para realizar tarefas de root.
@@ -65,5 +64,16 @@ Durante o processo o usuário será solicitado para selecionar algumas opções.
         * iftop
         * galternatives
         * macchanger
-
+<br><br>
+=Instruções para os Scripts Secundários=
+==Lista com os Scripts Secundários==
+    * instalar-rvm.sh - Instala Ruby e Rails
+==Instalação==
+    * Junto com o download existem arquivos com o nome no seguinte formato instalar-XXXXX.sh
+    * Leia e siga as instruções no início do arquivo
+        * <code>nano instalar-XXXXX.sh</code>
+    * Passe permissão de execução para o script
+        * <code>chmod +x instalar-XXXXX.sh</code>
+    * Execute o script
+        * <code>./instalar-XXXXX.sh</code>
 
