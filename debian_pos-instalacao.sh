@@ -31,11 +31,6 @@ aptitude update
 # --------------------------------------------------------------------------------
 # Wine HQ
 # --------------------------------------------------------------------------------
-echo >> /etc/apt/sources.list
-echo "deb http://www.lamaresh.net/apt $distribuicao main" >> /etc/apt/sources.list
-
-wget -O - http://www.lamaresh.net/apt/key.gpg | apt-key add -
-aptitude update
 
 
 # --------------------------------------------------------------------------------
