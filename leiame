@@ -67,7 +67,7 @@ Durante o processo o usuário será solicitado para selecionar algumas opções.
 <br><br>
 =Instruções para os Scripts Secundários=
 ==Lista com os Scripts Secundários==
-    * instalar-rvm.sh - Instala Ruby e Rails
+    * instalar-rvm.sh - Instala RVM, Ruby e Rails
 ==Instalação==
     * Junto com o download existem arquivos com o nome no seguinte formato instalar-XXXXX.sh
     * Leia e siga as instruções no início do arquivo

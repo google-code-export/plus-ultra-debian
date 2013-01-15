@@ -276,10 +276,9 @@ aptitude --assume-yes install gprename
 aptitude --assume-yes install libnautilus-extension-dev
 aptitude --assume-yes install python-docutils
 # Dropbox
-wget -O nautilus-dropbox.deb --quiet "http://linux.dropbox.com/packages/debian/nautilus-dropbox_1.4.0_all.deb"
-dpkg --install nautilus-dropbox.deb
-rm -r nautilus-dropbox.deb
-dropbox start -i
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86" | tar xzf -
+~/.dropbox-dist/dropboxd
+
 
 
 # --------------------------------------------------------------------------------
