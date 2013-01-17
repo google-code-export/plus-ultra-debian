@@ -45,7 +45,6 @@ if [ $DEBUG -ne 1 ]; then
   echo ". /usr/local/rvm/scripts/rvm" >> ~/.bashrc
   echo >> /home/$USUARIO/.bashrc
   echo ". /usr/local/rvm/scripts/rvm" >> /home/$USUARIO/.bashrc
-
 else
   echo "echo >> ~/.bashrc"
   echo "echo \". /usr/local/rvm/scripts/rvm\" >> ~/.bashrc"
@@ -53,6 +52,15 @@ else
   echo "echo \". /usr/local/rvm/scripts/rvm\" >> /home/$USUARIO/.bashrc"
 fi
 echo
+
+echo "Recarrega o bashrc de forma a colocar no PATH o RVM"
+if [ $DEBUG -ne 1 ]; then
+  . ~/.bashrc
+else
+  echo ". ~/.bashrc"
+fi
+echo
+
 
 echo "Adiciona dependencias"
 if [ $DEBUG -ne 1 ]; then
