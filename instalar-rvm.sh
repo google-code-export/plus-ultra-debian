@@ -15,19 +15,19 @@ echo
 echo "Atualização do Sistema Operacional"
 if [ $DEBUG -ne 1 ]; then
   aptitude update
-  aptitude upgrade
+  aptitude --assume-yes upgrade
 else
   echo "aptitude update"
-  echo "aptitude upgrade"
+  echo "aptitude --assume-yes upgrade"
 fi
 echo
 
 
 echo "Instalação do Git, curl e build-essential"
 if [ $DEBUG -ne 1 ]; then
-  aptitude install curl
+  aptitude --assume-yes install curl
 else
-  echo "aptitude install curl"
+  echo "aptitude --assume-yes install curl"
 fi
 echo
 
@@ -64,9 +64,9 @@ echo
 
 echo "Adiciona dependencias"
 if [ $DEBUG -ne 1 ]; then
-  aptitude install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
+  aptitude --assume-yes install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config
 else
-  echo "aptitude install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config"
+  echo "aptitude --assume-yes install build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf libc6-dev ncurses-dev automake libtool bison subversion pkg-config"
 fi
 echo
 
@@ -93,11 +93,11 @@ echo
 
 echo "MySQL para o Rails"
 if [ $DEBUG -ne 1 ]; then
+  aptitude --assume-yes install libmysqlclient-dev
   gem install mysql2
-  aptitude install libmysqlclient-dev
 else
+  echo "aptitude --assume-yes install libmysqlclient-dev"
   echo "gem install mysql2"
-  echo "aptitude install libmysqlclient-dev"
 fi
 echo
 
